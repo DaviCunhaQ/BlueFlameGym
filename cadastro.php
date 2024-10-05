@@ -9,7 +9,7 @@
         $novo_nome = uniqid();
         $pasta = './foto_aluno/';
         $extensao = strtolower(pathinfo($nomedafoto, PATHINFO_EXTENSION));
-        if ($extensao != 'jpg' && $extensao != 'png')
+        if ($extensao != 'jpg' && $extensao != 'png' && $extensao != 'jpeg')
             die('TIPO DE ARQUIVO INDESEJADO');
         $path = $pasta . $novo_nome . "." . $extensao;
         $deucerto = move_uploaded_file($foto["tmp_name"], $path);
